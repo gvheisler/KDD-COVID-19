@@ -4,7 +4,7 @@ ds <- read.csv2(file.choose())
 #ds <- read.csv2(url("https://ti.saude.rs.gov.br/covid19/download"))
 
 ds <- ds[,c(13, 16:20)]
-#ds <- ds[-which(ds$EVOLUCAO!='OBITO'),]
+ds <- ds[-which(ds$EVOLUCAO!='OBITO'),]
 
 colnames(ds) <- c("DEVELOPMENT", "COUGHING", "FEVER", "SORE THROAT", "SHORTNESS OF BREATH", "OTHER")
 
