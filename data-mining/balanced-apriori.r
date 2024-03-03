@@ -1,7 +1,7 @@
 library(rpart)
 library(rpart.plot)
 
-ds <- read.csv2(file.choose())
+ds <- read.csv2("data.csv")
 #ds <- read.csv2(url("https://ti.saude.rs.gov.br/covid19/download"))
 
 ds <- ds[,c(13, 16:20)]
