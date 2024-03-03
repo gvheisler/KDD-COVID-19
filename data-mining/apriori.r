@@ -6,11 +6,12 @@ ds <- read.csv2("data.csv")
 ds <- ds[,c(13, 16:20)]
 ds <- ds[-which(ds$EVOLUCAO!='OBITO'),]
 
-colnames(ds) <- c("DEVELOPMENT", "COUGHING", "FEVER", "SORE THROAT", "SHORTNESS OF BREATH", "OTHER")
+#for english names
+#colnames(ds) <- c("DEVELOPMENT", "COUGHING", "FEVER", "SORE THROAT", "SHORTNESS OF BREATH", "OTHER")
 
-for(i in 2:ncol(ds)){
-  ds[,i]<-ifelse(ds[,i]=="SIM","YES","NO")
-}
+#for(i in 2:ncol(ds)){
+#  ds[,i]<-ifelse(ds[,i]=="SIM","YES","NO")
+#}
 
 ds$DEVELOPMENT <- ifelse(ds$DEVELOPMENT=="OBITO","DEATH","RECOVERED")
 
