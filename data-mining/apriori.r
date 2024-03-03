@@ -13,7 +13,7 @@ ds <- ds[-which(ds$EVOLUCAO!='OBITO'),]
 #  ds[,i]<-ifelse(ds[,i]=="SIM","YES","NO")
 #}
 
-ds$DEVELOPMENT <- ifelse(ds$DEVELOPMENT=="OBITO","DEATH","RECOVERED")
+#ds$DEVELOPMENT <- ifelse(ds$DEVELOPMENT=="OBITO","DEATH","RECOVERED")
 
 for (i in 1:ncol(ds)) {
   ds[,i] <- as.factor(ds[,i])
