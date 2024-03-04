@@ -22,8 +22,8 @@ for (i in 1:ncol(ds)) {
 supports <- c(1.0,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05,0.01,0.001);
 
 for(sup in supports){
-  regras <- apriori(data = ds, parameter = list(conf = 0.001, supp = sup), target = 'rules', minlen = 2, maxlen = 10)
-  regras <- subset(regras, rhs %in% 'DEVELOPMENT=DEATH')
+  regras <- apriori(data = ds, parameter = list(conf = 0.001, supp = sup), target = 'rules', minlen = 2, maxlen = 2)
+  regras <- subset(regras, rhs %in% 'EVOLUCAO=OBITO')
   regras <- sort(regras, by = 'confidence', decreasing = TRUE)
   inspect(regras)
 }

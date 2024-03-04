@@ -23,8 +23,8 @@ for (i in 1:nrow(dailyCases)) {
 }
 
 plot(x = dailyCases$day, y = dailyCases$cases, type = 'l',
-     xlab = 'Day', ylab = 'Cases', 
-     main = "Cases of COVID-19 confirmed by day")
+     xlab = 'Dia', ylab = 'Casos', 
+     main = "Casos de COVID-19 confirmados por dia")
 
 
 # daily deaths plot
@@ -46,6 +46,6 @@ for (i in 1:nrow(dailyDeaths)) {
 }
 
 plot(x = dailyDeaths$day, y = dailyDeaths$deaths, type = 'l', col = 'red',
-     xlab = 'Day', ylab = 'Deaths', 
-     main = "Deaths by COVID-19 by day")
+     xlab = 'Dia', ylab = 'Óbitos', 
+     main = "Óbitos por COVID-19 por dia")
 

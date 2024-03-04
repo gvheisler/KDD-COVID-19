@@ -5,3 +5,5 @@ ds$DATA_CONFIRMACAO <- as.Date(ds$DATA_CONFIRMACAO, format = "%d/%m/%Y")
 
 ds <- ds[which(ds$DATA_CONFIRMACAO<=as.Date("31/12/2022", format = "%d/%m/%Y")),]
 
+write.csv2(ds, "data.csv")
+
